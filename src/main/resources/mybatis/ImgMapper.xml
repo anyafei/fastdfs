@@ -3,7 +3,7 @@
 <mapper namespace="star.demo.fastdfs.db.ImgDao">
  
   <select id="findImgList" parameterType="java.util.Map" resultType="star.demo.fastdfs.model.Img">
-    select id,imgName,imgUrl,imgType from img order by id desc;
+    select id,imgName,imgUrl,imgType from img order by id desc limit #{start},#{end};
   </select>
 
   <select id="findImg" parameterType="Integer" resultType="star.demo.fastdfs.model.Img">

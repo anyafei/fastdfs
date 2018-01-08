@@ -25,9 +25,12 @@ public class ImgController {
             @RequestParam(value="pagesize", required=false, defaultValue="10") int pagesize,
             Model model
     ){
+        int start = (page - 1) * pagesize;
+        int end = page * pagesize;
+
         Map map = new HashMap();
-        map.put("page", page);
-        map.put("pagesize", pagesize);
+        map.put("start", start);
+        map.put("end", end);
         List<Img> list = imgDao.findImgList(map);
         model.addAttribute("list", list);
         return "index";
