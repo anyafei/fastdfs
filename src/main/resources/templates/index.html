@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片列表</title>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>imgName</th>
+            <th>imgUrl</th>
+            <th>imgType</th>
+        </tr>
+    </thead>
+    <tbody>
+        #foreach($item in $list)
+        <tr>
+            <td>$item.id</td>
+            <td>$item.imgName</td>
+            <td>$item.imgUrl</td>
+            <td>$item.imgType</td>
+        </tr>
+        #end
+    </tbody>
+</table>
+</body>
+</html>

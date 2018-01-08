@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="star.demo.fastdfs.dao.ImgDao">
+<mapper namespace="star.demo.fastdfs.db.ImgDao">
  
-  <select id="findImgList" parameterType="java.util.Map" resultType="star.demo.fastdfs..model.Img">
+  <select id="findImgList" parameterType="java.util.Map" resultType="star.demo.fastdfs.model.Img">
     select id,imgName,imgUrl,imgType from img order by id desc;
   </select>
 
-  <select id="findImg" parameterType="Integer" resultType="star.demo.fastdfs..model.Img">
+  <select id="findImg" parameterType="Integer" resultType="star.demo.fastdfs.model.Img">
     select id,imgName,imgUrl,imgType from img where id = #{Id};
   </select>
 
-  <insert id="insert" parameterType="star.demo.fastdfs..model.Img">
+  <insert id="insert" parameterType="star.demo.fastdfs.model.Img">
     INSERT INTO img (
     imgName
     , imgUrl
