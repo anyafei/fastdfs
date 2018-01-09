@@ -26,9 +26,9 @@
         <tbody>
             #foreach($item in $list)
             <tr>
-                <td>$item.id</td>
+                <td><a href="http://static.jwl.com/${item.id}.jpg" target="_blank">$item.id</a></td>
                 <td>$item.imgName</td>
-                <td>$item.imgUrl</td>
+                <td><a href="http://static.jwl.com$item.imgUrl" target="_blank">$item.imgUrl</a></td>
                 <td>$item.imgType</td>
             </tr>
             #end

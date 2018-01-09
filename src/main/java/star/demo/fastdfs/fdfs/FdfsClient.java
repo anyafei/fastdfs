@@ -56,7 +56,7 @@ public class FdfsClient {
         String groupName = uploadResults[0];
         String remoteFileName = uploadResults[1];
 
-        String Url = groupName + "/" + remoteFileName;
+        String Url = "/" + groupName + "/" + remoteFileName;
         return Url;
     }
 
